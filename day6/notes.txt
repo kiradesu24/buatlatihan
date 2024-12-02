@@ -1,0 +1,6 @@
+lifecycle method = siklus hidup yang terjadi di dalam react
+
+componentWillMount = siklus sebelum page dirender (list of function)
+componentDidMount = siklus setelah page berhasil dirender
+componentDidUpdate = siklus yg dilalui setelah terjadi perubahan terhadap state
+componentWillUnmount = siklus yg dilalui setelah meninggalkan component 
