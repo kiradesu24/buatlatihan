@@ -19,3 +19,15 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.imageContainer {
+  position: relative;
+  height: 400px;
+  width: 100%;
+}
+
+@layer base {
+  h1 {
+    @apply text-2xl font-bold;
+  }
+}
