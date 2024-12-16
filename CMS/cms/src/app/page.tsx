@@ -5,6 +5,7 @@ import {
 } from "@/contentful/types/blogpost.types";
 import Image from "next/image";
 import Link from "next/link";
+import "./home.css";
   
 const getBlogPostsContentful = async () => {
   try {
