@@ -1,0 +1,26 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "productName": "Helm motor",
+            "price": 100000,
+            "categoryId": 2
+        },
+        {
+            "id": 2,
+            "productName": "Aquarium mini",
+            "price": 20000,
+            "categoryId": 1
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "name": "fish-tank"
+        },
+        {
+           "id": 1,
+            "name": "otomotif" 
+        }
+    ]
+}
