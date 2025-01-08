@@ -1,9 +1,10 @@
 import { Request, Response, Router } from "express";
 import { addProduct, getData } from "../helpers/product";
+import { IProduct } from "../interfaces/product.interface";
 const router = Router();
 
 router.get("/", (req: Request, res:Response) => {
-    const data = getData();
+    const { products } = getData();
     res.send({
         message: "fetching products",
         data: products,
@@ -12,7 +13,7 @@ router.get("/", (req: Request, res:Response) => {
 
 router.get("/:id", (req: Request, res:Response) => {
     const { id } = req.params;
-    const products = getData();
+    const { products } = getData();
     const data = products.find((_) => _.id == Number(id));
     res.send({
         message: "fetching product id" + id,
@@ -21,11 +22,7 @@ router.get("/:id", (req: Request, res:Response) => {
 });
 
 router.post("/", (req: Request, res:Response) => {
-const products = getData();
-const id = products[products.length - 1].id + 1;
-const { productName, price, categoryId } = req.body;
-const newData = { id, productName, price, categoryId };
-addProduct(newData);
+addProduct(req.body as IProduct);
 res.send({
     message: "new product  has been added"
 });
